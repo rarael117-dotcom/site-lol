@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guia Básico League of Legends</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow-x: hidden;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    video.background {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1;
+      object-fit: cover;
+    }
+
+    .content {
+      background: rgba(0, 0, 0, 0.65);
+      padding: 40px;
+      border-radius: 20px;
+      margin: 50px auto;
+      width: 80%;
+      max-width: 900px;
+    }
+
+    h1 {
+      font-size: 2.8em;
+      color: #f4c542;
+      text-shadow: 2px 2px 10px black;
+    }
+
+    h2 {
+      color: #e6b800;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.6em;
+    }
+
+    img {
+      width: 90%;
+      max-width: 600px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    .buttons {
+      margin-top: 40px;
+    }
+
+    .buttons a {
+      text-decoration: none;
+      background-color: #1e88e5;
+      color: white;
+      padding: 15px 30px;
+      margin: 10px;
+      border-radius: 10px;
+      font-size: 1.2em;
+      transition: 0.3s;
+    }
+
+    .buttons a:hover {
+      background-color: #0d47a1;
+    }
+
+    #soundButton {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #f4c542;
+      border: 2px solid #f4c542;
+      padding: 10px 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: 0.3s;
+    }
+
+    #soundButton:hover {
+      background-color: #f4c542;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Vídeo de fundo -->
+  <video id="bgVideo" class="background" autoplay loop playsinline>
+    <source src="./legendsneverdie.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos.
+  </video>
+
+  <!-- Botão para ativar o som -->
+  <button id="soundButton">🔊 Ativar som</button>
+
+  <!-- Conteúdo principal -->
+  <div class="content">
+    <h1>Guia Básico League of Legends</h1>
+    <img src="./imagens/fotolol.png" alt="Imagem League of Legends">
+
+    <p>Bem-vindo ao League of Legends! Este é um jogo de estratégia em equipe onde dois times de cinco jogadores lutam para destruir a base inimiga. Cada jogador escolhe um campeão com habilidades únicas e atua em uma função específica dentro do mapa.</p>
+
+    <h2>Funções e Rotas</h2>
+    <p>O mapa é dividido em rotas, conhecidas como Top, Mid, Bot (onde ficam o ADC e o Suporte) e a Jungle. Cada uma delas possui uma função essencial dentro da equipe.</p>
+
+    <img src="./imagens/rotaslol.png" alt="Mapa das rotas do LoL">
+
+    <h2>Bora começar? Qual rota você quer?</h2>
+
+    <p>
+      - <strong>Top:</strong> Campeões resistentes e com muito 1x1.<br>
+      - <strong>Mid:</strong> Magos e assassinos que controlam o mapa.<br>
+      - <strong>ADC:</strong> Causam muito dano físico no fim do jogo.<br>
+      - <strong>Suporte:</strong> Protege e auxilia o ADC.<br>
+      - <strong>Jungle:</strong> Anda entre as rotas, derrota monstros neutros e ajuda os aliados com emboscadas.
+    </p>
+
+    <!-- Botões de navegação -->
+    <div class="buttons">
+      <a href="top.html">Top</a>
+      <a href="mid.html">Mid</a>
+      <a href="adc.html">ADC</a>
+      <a href="sup.html">Suporte</a>
+      <a href="jungle.html">Jungle</a>
+    </div>
+  </div>
+
+  <!-- Script para som -->
+  <script>
+    const video = document.getElementById('bgVideo');
+    const soundButton = document.getElementById('soundButton');
+
+    soundButton.addEventListener('click', () => {
+      video.muted = false;
+      video.volume = 1.0;
+      video.play();
+      soundButton.style.display = 'none';
+    });
+  </script>
+
+</body>
+</html>
